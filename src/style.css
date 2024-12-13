@@ -1,45 +1,172 @@
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  zoom: 155%;
+  overflow: scroll;
+}
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Prevent scrolling of the container */
+}
+.card {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+select.buttonFilter {
+  padding: 5px 9px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  color: #007bff;
+  cursor: pointer;
+  appearance: none;      /* Remove default select styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-align: center;
+  width: 100px;          /* Match button width */
+}
+
+.center-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonFilter {
+  padding: 8px 12px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.row8-container {
+  display: flex;
+  justify-content: space-between; /* Push elements to opposite ends */
+  align-items: center;            /* Vertically align elements in the center */
+  gap: 1rem;                      /* Optional: spacing between elements */
+  width: 100%;                    /* Ensure the container takes the full width */
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.green-flag {
+  color: green;
+}
+.red-flag {
+  color: red;
+}
+.gray-flag {
+  color: gray;
+}
+
+.inputSearch{
+  padding: 2px;
   font-size: 16px;
-  line-height: 1;
-  color: #000;
-  background-color: #fff;
-  margin: 10;
-  overflow: hidden;
 }
 
-p{
-  color:#282828;
-  font-size: 16px;
+.row1{
+  background-color: #d9ebf5;
+  font-weight: 900;
+  padding: 3px;
+  font-size: 1.2em;
+}
+
+.row2{
+  font-weight: 600;
+  margin: 2px;
+  padding: 3px;
+}
+
+.row3{
+background-color: #f4f4f4;
+font-weight: 600;
+padding: 3px;
+}
+
+.row11-container{
+  color: gray;
+  font-style: italic;
+
+}
+
+.row4{
+  padding: 3px;
+}
+
+#text-filter {
+  position: sticky;
+  top: 0;
+  font-size: 16pt;
+
+  z-index: 1000; /* Ensure the input field stays above other content */
+}
+
+#bill-list {
+  flex: 1; /* Takes up remaining space */
+  overflow-y: auto; /* Allows vertical scrolling if content exceeds viewport height */
 }
 
 
-h1 {
-  background-color:#006690;
-  color: #fff;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 1.2;
-  margin: 0 0 10px;
+.card-header {
+  max-width: 300px;
 }
 
-.tintedBlackLeft {
-  background-color:#00000033;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.2;
-  padding:11px 11px 11px 0px;
+.row5bg{margin-left: 2px;}
+
+.category-header {
+  background-color: #6293FE; /* Light background color for the header */
+  color: white;
+  padding: 5px;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Ensure the header stays above the cards */
+  border-bottom: 1px solid #dee2e6; /* Optional: add a border to separate the header from the cards */
+font-weight: 600;
+box-sizing: border-box;  /* Include padding and border in the element's total width and height */
+font-size: 16pt;
 }
 
-button {
-  padding: 5px 9px 5px 9px;
-  border-radius: 3px;
-  font-size: 18px;
-  border: 1px solid #0091CE;
-  background-color: #0091CE;
-  color: #fff;
+
+
+
+
+.card-header h3 {
+  margin: 0;
+}
+
+
+
+.headerText{
+  line-height: 	1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 16pt;
+}
+
+input{
+  width: 92%;
+  margin: 0px 0px 5px 0px;
+}
+
+input{
+  margin: 2px;
+  padding: 10px;
 }

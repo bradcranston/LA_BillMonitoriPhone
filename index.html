@@ -2,19 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+      @import "node_modules/@shoelace-style/shoelace/dist/themes/light.css";
       @import "./src/style.css";
     </style>
-    <title>JSDev</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/shoelace-autoloader.js"></script>    
   </head>
   <body>
-    <h1>Alright. You're set.</h1>
-      <h2 class="tintedBlackLeft">Now build something amazing!</h2>
-      <p>JS in FM is amazing</p>
-    <button type="button">Click Me!</button>
-
+    <div class="container">
+      <div class="center-select">
+      <select class="buttonFilter" id="year-filter"></select>
+      <select class="buttonFilter" id="goodbad-filter">
+        <option value="all">All Bills</option>
+        <option value="Good">Good</option>
+        <option value="Bad">Bad</option>
+      </select>
+    </div>
+    <sl-button-group>
+      <sl-button id="sort-date-btn" variant="primary" onclick="sortBy('date')">Sort by Date</sl-button>
+      <sl-button id="sort-category-btn" variant="primary" onclick="sortBy('category')">Sort by Category</sl-button>
+      <sl-button id="sort-number-btn" variant="primary" onclick="sortBy('number')">Sort by Bill Number</sl-button>
+    </sl-button-group>
+      <input type="text" id="text-filter" placeholder="Search by text...">
+      <div id="bill-list"></div>
+  
+    </div>
     <script type="module">
       import "./src/index.js";
     </script>
   </body>
 </html>
+
+
